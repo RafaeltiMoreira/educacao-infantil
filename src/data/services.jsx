@@ -1,7 +1,7 @@
 import { IoBookOutline, IoBook } from "react-icons/io5";
 
-import afroteca from '../assets/afroteca.pdf';
-import indigenas from '../assets/cartilha-indigenas.pdf';
+import afroteca from '../../public/images/afroteca.pdf';
+import indigenas from '../../public/images/cartilha-indigenas.pdf';
 
 
 export default [
