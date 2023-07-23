@@ -1,5 +1,5 @@
 import React from "react";
-import educa from '../../public/images/educacao-infantil-lapis.webp';
+import educa from '../assets/images/educacao-infantil-lapis.webp';
 import { IoLogoInstagram, IoLogoWhatsapp, IoLogoFacebook, IoLogoYoutube } from "react-icons/io5";
 
 export default function HomeSection() {
