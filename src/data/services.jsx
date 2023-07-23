@@ -9,13 +9,13 @@ export default [
         title: 'Cartilha Indígenas',
         icon: <IoBookOutline className='w-full h-full' />,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit!',
-        embedPdf: <embed className='md:w11/12 w-full object-cover rounded-md mt-10' src={indigenas} type="application/pdf" height={300} />,
+        embedPdf: indigenas,
         /* + `${'#toolbar=0'}`*/
     },
     {
         title: 'Afroteca',
         icon: <IoBook className='w-full h-full' />,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit!',
-        embedPdf: <embed className='md:w11/12 w-full object-cover rounded-md mt-10' src={afroteca} type="application/pdf" height={300} />,
+        embedPdf: afroteca,
     }
 ]
