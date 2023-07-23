@@ -1,18 +1,17 @@
 <h1 align="center">
-  🚀<br>Portfólio - Rafael Moreira
+  📚 Educação infantil no DF.
 </h1>
 
 ![Prévia do projeto](/src/assets/preview.png)
 
-<h4 align="center"><a href="https://rafaeltimoreira.github.io/portfolio-rafael/">Clique para visitar o projeto</a></h4>
+<h4 align="center"><a href="https://rafaeltimoreira.github.io/educacao-infantil/">Clique para visitar o projeto</a></h4>
 
 ## 📚 Seções
 
-O site é composto por três seções:
+O site é composto por duas seções:
 
-- **Home:** Nele temos uma breve apresentação e linguagens utilizadas;
-- **Projetos:** Apresenta alguns projetos desenvolvidos para Front-end e links para os projetos e repositório GitHub;
-- **Quem sou:** Nessa seção tenho uma descrição dizendo um pouco sobre mim.
+- **Home:** Uma breve apresentação;
+- **PDFs para leitura:** Cartilha Indígenas e Afroteca.
 
 ---
 
