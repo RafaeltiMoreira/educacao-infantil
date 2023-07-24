@@ -9,7 +9,7 @@ export default function Services() {
       <Titles>PDFs para leitura</Titles>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 py-6'>
         {services.map(service => (
-          <div key={service.title} className='w-full'>
+          
             <ServicesItens
               key={service.title}
               title={service.title}
@@ -17,7 +17,7 @@ export default function Services() {
               description={service.description}
               embedPdf={service.embedPdf}
             />
-          </div>
+          
         ))}
       </div>
     </div>
