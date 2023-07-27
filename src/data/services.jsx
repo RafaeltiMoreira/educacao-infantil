@@ -1,8 +1,7 @@
 import { IoBookOutline, IoBook } from "react-icons/io5";
 
-import afroteca from '../assets/images/afroteca.pdf';
-import indigenas from '../assets/images/cartilha-indigenas.pdf';
-
+import afroteca from '../assets/afroteca.pdf';
+import indigenas from '../assets/cartilha-indigenas.pdf';
 
 export default [
     {
@@ -18,9 +17,3 @@ export default [
         embedPdf: afroteca,
     }
 ]
-
-/*
-<iframe src={indigenas} className='md:w11/12 w-full object-cover rounded-md'  type="application/pdf" height={390} />
-
-<iframe src={afroteca} className='md:w11/12 w-full object-cover rounded-md'  type="application/pdf" height={390} />,
-*/

@@ -36,12 +36,6 @@ export default function HomeSection() {
                         </div>
 
                     </div>
-
-                    {/*<a href="#works" className="inline-block md:inline-flex md:items-center mt-8 px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-cyan-600 hover:bg-cyan-700 md:text-md">Ver meus projetos</a>
-                    lg:mb-20 md:mb-20
-                    */}
-
-
                 </div>
             </div>
         </div>
