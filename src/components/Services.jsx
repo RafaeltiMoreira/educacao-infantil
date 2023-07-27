@@ -16,6 +16,7 @@ export default function Services() {
               icon={service.icon}
               description={service.description}
               embedPdf={service.embedPdf}
+              className='md:relative'
             />
           
         ))}

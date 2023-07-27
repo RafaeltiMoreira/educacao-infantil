@@ -22,16 +22,16 @@ export default function HomeSection() {
 
                     <div className="mt-4 text-3xl flex items-center md:justify-start justify-center gap-5">
 
-                        <div className="cursor-pointer hover:text-gray-900 text-gray-600 dark:hover:text-white">
+                        <div className="cursor-pointer hover:text-purple-500 text-gray-600 dark:hover:text-purple-500">
                             <IoLogoInstagram />
                         </div>
-                        <div className="cursor-pointer hover:text-gray-900 text-gray-600 dark:hover:text-white">
+                        <div className="cursor-pointer hover:text-blue-700 text-gray-600 dark:hover:text-blue-700">
                             <IoLogoFacebook />
                         </div>
-                        <div className="cursor-pointer hover:text-gray-900 text-gray-600 dark:hover:text-white">
+                        <div className="cursor-pointer hover:text-red-700 text-gray-600 dark:hover:text-red-700">
                             <IoLogoYoutube />
                         </div>
-                        <div className="cursor-pointer hover:text-gray-900 text-gray-600 dark:hover:text-white">
+                        <div className="cursor-pointer hover:text-green-600 text-gray-600 dark:hover:text-green-600">
                             <IoLogoWhatsapp />
                         </div>
 

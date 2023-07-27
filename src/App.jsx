@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <button type='button' onClick={handleThemeSwitch} className='fixed z-10 right-2 top-2 bg-gray-600 dark:bg-gray-700 text-lg p-2 rounded-full' title='Alternar tema do site'>
+      <button type='button' onClick={handleThemeSwitch} className='fixed z-10 right-2 top-2 bg-gray-600 dark:bg-gray-700 text-lg p-3 rounded-full' title='Alternar tema do site'>
         {theme === 'dark' ? '🌛' : '🌞'}
       </button>
       <div className='font-inter bg:white dark:bg-gray-900'>

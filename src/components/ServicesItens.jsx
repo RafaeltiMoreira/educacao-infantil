@@ -38,10 +38,10 @@ export default function ServicesItens({ title, icon, description, embedPdf }) {
           </Document>
         </div>
 
-        <div className="react-pdf__Page__canvas md:flex md:justify-center md:items-center md:w-[150]" style={{ height: '--scale-factor: auto' }}>
+        <div className='react-pdf__Page__canvas' style={{ height: '--scale-factor: auto' }}>
         </div>
 
-        <div className="react-pdf__Page__annotations annotationLayer" style={{ height: '--scale-factor: auto' }}>   </div>
+        <div className='react-pdf__Page__annotations annotationLayer' style={{ height: '--scale-factor: auto' }}>   </div>
 
         <div className='flex justify-center flex-wrap'>
           <button
