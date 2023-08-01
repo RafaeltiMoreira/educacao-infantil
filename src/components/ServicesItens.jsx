@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -8,6 +8,20 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 export default function ServicesItens({ title, icon, description, embedPdf }) {
   const [numPages, setNumPages] = useState(null);
   const [scale, setScale] = useState(1.1);
+  const [pdfLoaded, setPdfLoaded] = useState(false);
+
+  useEffect(() => {
+    // Carregar PDF
+    const loadPdf = async () => {
+      try {
+        await pdfjs.getDocument(embedPdf).promise;
+        setPdfLoaded(true);
+      } catch (error) {
+        console.error('Error loading PDF:', error);
+      }
+    };
+    loadPdf();
+  }, []);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -30,18 +44,18 @@ export default function ServicesItens({ title, icon, description, embedPdf }) {
       <p className='text-md font-semibold text-gray-600 dark:text-gray-300'>{description}</p>
       <div className='lg:w-full md:w-auto'>
 
-        <div className='mt-12 mb-5 overflow-auto' style={{ maxHeight: '650px' }}>
-          <Document file={embedPdf} onLoadSuccess={onDocumentLoadSuccess}>
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page className='mb-2' key={`page_${index + 1}`} pageNumber={index + 1} scale={scale} renderTextLayer={false} width={879} />
-            ))}
-          </Document>
-        </div>
-
-        <div className='react-pdf__Page__canvas' style={{ height: '--scale-factor: auto' }}>
-        </div>
-
-        <div className='react-pdf__Page__annotations annotationLayer' style={{ height: '--scale-factor: auto' }}>   </div>
+        {pdfLoaded ? (
+          <div className='mt-12 mb-5 overflow-auto' style={{ maxHeight: '1350px', minHeight: '350px' }}>
+            {/* @vite-ignore */}
+            <Document className='' file={embedPdf} onLoadSuccess={onDocumentLoadSuccess}>
+              {Array.from(new Array(numPages), (el, index) => (
+                <Page className='mb-2' key={`page_${index + 1}`} pageNumber={index + 1} scale={scale} renderTextLayer={false} width={879} />
+              ))}
+            </Document>
+          </div>
+        ) : (
+          <div className='text-gray-800'>Carregando PDF...</div>
+        )}
 
         <div className='flex justify-center flex-wrap'>
           <button
