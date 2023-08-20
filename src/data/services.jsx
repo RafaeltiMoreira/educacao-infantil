@@ -8,7 +8,7 @@ export default [
         title: 'Cartilha Indígenas',
         icon: <IoBookOutline className='w-full h-full' />,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit!',
-        imgUrl: '',
+        imgUrl: 'https://raw.githubusercontent.com/RafaeltiMoreira/educacao-infantil/main/src/assets/images/capa-cartilha-Indigenas.jpg',
         embedPdf: indigenas,
         workUrl: 'https://drive.google.com/file/d/1UvMHErodebo0Bqy-0kVn9FTBY43yh-wA/view?usp=sharing',
     },
@@ -16,7 +16,7 @@ export default [
         title: 'Afroteca',
         icon: <IoBook className='w-full h-full' />,
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit!',
-        imgUrl: '',
+        imgUrl: 'https://raw.githubusercontent.com/RafaeltiMoreira/educacao-infantil/main/src/assets/images/capa-afroteca.jpg',
         embedPdf: afroteca,
         workUrl: 'https://drive.google.com/file/d/1PbCIqb11sk4G2386BtPsAi5JssrwTqTL/view?usp=sharing',
     }

@@ -18,6 +18,7 @@ export default function Services() {
               embedPdf={service.embedPdf}
               className='md:relative'
               workUrl={service.workUrl}
+              imgUrl={service.imgUrl}
             />
           
         ))}
