@@ -5,7 +5,7 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-export default function ServicesItens({ title, icon, description, embedPdf }) {
+export default function ServicesItens({ title, icon, description, embedPdf, workUrl }) {
   const [numPages, setNumPages] = useState(null);
   const [scale, setScale] = useState(1.1);
   const [pdfLoaded, setPdfLoaded] = useState(false);
@@ -25,14 +25,6 @@ export default function ServicesItens({ title, icon, description, embedPdf }) {
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
-  }
-
-  function handleZoomOut() {
-    setScale((prevScale) => Math.max(prevScale - 0.25, 0.25));
-  }
-
-  function handleZoomIn() {
-    setScale((prevScale) => Math.min(prevScale + 0.25, 3.0));
   }
 
   return (
@@ -58,20 +50,7 @@ export default function ServicesItens({ title, icon, description, embedPdf }) {
         )}
 
         <div className='flex justify-center flex-wrap'>
-          <button
-            className='font-semibold mx-2 px-3 py-1 bg-cyan-500 dark:bg-cyan-600 text-white rounded-md'
-            onClick={handleZoomOut}
-            disabled={scale <= 0.25}
-          >
-            Zoom -
-          </button>
-          <button
-            className='font-semibold mx-2 px-3 py-1 bg-cyan-500 dark:bg-cyan-600 text-white rounded-md'
-            onClick={handleZoomIn}
-            disabled={scale >= 3.0}
-          >
-            Zoom +
-          </button>
+          <a href={workUrl} target='_blank' rel='noreferrer' className='font-semibold mx-2 px-3 py-1 bg-cyan-500 dark:bg-cyan-600 text-white rounded-md'>Ler</a>
           <a
             href={embedPdf}
             download={`${title}.pdf`}
@@ -80,7 +59,6 @@ export default function ServicesItens({ title, icon, description, embedPdf }) {
             Baixar
           </a>
         </div>
-
       </div>
     </div>
   );
